@@ -1,8 +1,11 @@
 pi = 3.14159
 radius = 2.2
 # area of circle equation <- this is a comment
+# the space between the # and the text is optional, but it makes it easier to read
 area = pi*(radius**2)
-print(area)
+area1 = pi * (radius ** 2)
+print("The area of the circle is:", area)
+print("The area of the circle is:", area1)
 
 # change values of radius <- another comment
 # use comments to help others understand what you are doing in code
@@ -34,6 +37,7 @@ print(area)
 
 # define a variable
 a_very_long_variable_name_dont_name_them_this_long_pls = 0
+
 
 # below, start typing a_ve then hit tab... cool, right!
 # use autocomplete to change the value of that variable to 1
