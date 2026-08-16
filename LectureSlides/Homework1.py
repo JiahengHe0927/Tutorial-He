@@ -1,0 +1,20 @@
+#Lec1 calculate the area of a circle
+pi=3.14159
+radius=2.2
+area=pi*(radius**2)
+print(area)
+
+#Lec2
+hi="hello there"
+name="ana"
+greeting=hi+" "+name
+greeting
+
+silly=hi+" "+name*3
+silly
+
+x=1
+print(x)
+x_str=str(x)
+print("my fav num is",x,".","x=",x)
+print("my fav num is"+x_str+"."+"x="+x_str)
