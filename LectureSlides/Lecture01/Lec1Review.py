@@ -41,3 +41,22 @@ print(x)
 x_str = str(x)
 print("my fav num is", x, ".", "x =", x)
 print("my fav num is " + x_str + ". " + "x = " + x_str)
+
+import math
+
+answer = 10
+error = 0.001
+
+g = float(input("Your guess is: "))
+
+# if (math.fabs(g*g - answer) <= error):
+#     print(g, " is the answer")
+# else:
+#     g = (g + answer/g)/2
+#     print("Current result is: ", g)
+
+while (math.fabs(g*g - answer) > error):
+    g = (g + answer/g) / 2
+    print("the current g is: ", g)
+
+print(g, " is close enough")
