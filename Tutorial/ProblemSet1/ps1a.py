@@ -4,7 +4,7 @@
 # Declaration part: 
 # In most cases, the declaration part is at the top of the code.
 # Mind the "magic numbers" in the code below, they are constants that are given in the problem description.
-portion_down_payment=0.25
+portion_down_payment=0.25 # Global variable
 current_savings=0
 r=0.04
 
@@ -21,7 +21,7 @@ total_cost=float(input("Enter the cost of your dream home:"))
 # current_savings=0
 # ====================================
 
-months=0
+months=0 # Local variable
 
 # ====================================
 # Using the variable we defined before.

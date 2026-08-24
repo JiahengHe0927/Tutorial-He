@@ -21,6 +21,29 @@ low=0
 high=10000
 # ====================================
 
+# ====================================
+# 1 iteration 
+# low = 0; high = 10000;
+# calculate mean: 5000 => how is your saving?
+# if saving > 1M + 100:
+#    low = 0; high = 5000
+# elif saving < 1M - 100:
+#    low = 5000; high = 10000;
+# (assume saving < 1M)
+
+# 2 iteration
+# low = 5000; high=10000
+# calculate mean: 7500 => how is your saving?
+# if saving > 1M + 100:
+#    low = 5000; high = 7500
+# elif saving < 1M - 100:
+#    low = 7500; high = 10000
+
+# ... iteration
+# until: when using some mean, 1M - 100 <= saving <= 1M + 100
+# return mean / 10000 
+# ====================================
+
 starting_salary=float(input("Enter the starting salary:"))
 
 # ====================================
@@ -32,33 +55,3 @@ starting_salary=float(input("Enter the starting salary:"))
 # low=0
 # high=10000
 # ====================================
-
-steps=0 
-found=False
-
-# Re-write the calculation part. 
-# while low<=high:
-#     steps+=1
-#     mid=(low+high)/2
-#     portion_saved=mid/10000
-#     current_savings=0
-#     annual_salary=starting_salary
-#     monthly_salary=annual_salary/12
-#     for month in range(0,37,1):
-#         current_savings+=current_savings*r/12
-#         current_savings+=monthly_salary*portion_saved
-#         if month%6==0:
-#             annual_salary=annual_salary+annual_salary*semi_annual_raise
-#             monthly_salary=annual_salary/12
-#     if abs(current_savings-down_payment)<=100:
-#         found=True
-#         break
-#     elif current_savings<down_payment:
-#         low=mid+1
-#     else:
-#         high=mid-1
-# if found:
-#     print(portion_saved)
-#     print(steps)
-# else:
-#     print("It is not possible to pay the down payment in three years")
