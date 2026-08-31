@@ -3,6 +3,7 @@ annual_salary=starting_salary
 total_cost=1000000
 portion_down_payment=0.25*total_cost
 deviation=100
+
 def calculate_savings(annual_salary,portion_saved):
     current_savings=0
     r=0.04
@@ -13,7 +14,9 @@ def calculate_savings(annual_salary,portion_saved):
           annual_salary=annual_salary+annual_salary*semi_annual_raise
           monthly_salary+annual_salary/12
           current_savings+=current_savings*r/12
+
 max_savings=calculate_savings(starting_salary,1)
+
 if max_savings<portion_down_payment-deviation:
     print("It is not possible to save for the down payment in 36 months.")
 else:
