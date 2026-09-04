@@ -4,6 +4,12 @@ total_cost=1000000
 portion_down_payment=0.25*total_cost
 deviation=100
 
+"""
+Coursework:
+1. Fix the code and program
+2. Take the calculation part as another function (try more functions)
+"""
+
 def calculate_savings(annual_salary,portion_saved):
     current_savings=0
     r=0.04
