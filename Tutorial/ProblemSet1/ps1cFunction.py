@@ -26,12 +26,37 @@ monthly_salary=annual_salary/total_month_a_year
 annual_salary_minimum=annual_salary
 monthly_salary_minimum=monthly_salary
 
+def end_session_one():
+    print("It is not possible to pay the down payment in three years.")
+    print("The difference between your current saving and aim is: ", down_payment - current_savings)
+    exit()
+
+def end_session_two(saving, aim, error):
+    if saving < aim - error:
+        print("It is not possible to pay the down payment in three years.")
+        print("The difference between your current saving and aim is: ", down_payment - current_savings)
+        exit()
+
+def monthly_increase(saving, r, total_month_a_year, monthly_salary, portion_saved):
+    saving += saving * r / total_month_a_year + monthly_salary * portion_saved
+    return saving 
+
+# def annual_increase(annual_salary, semi_annual_raise):
+#     annual_salary += annual_salary * semi_annual_raise
+#     return annual_salary
+
+def annual_increase(x, y):
+    x += x * y 
+    return x 
+
 def calculate_salary_over_years(annual_salary, monthly_salary, portion_saved, plan_month, r, total_month_a_year, semi_annual_raise):
     saving = 0 
     for month in range(1, plan_month+1, 1):
-        saving += saving * r / total_month_a_year + monthly_salary * portion_saved
+        # saving += saving * r / total_month_a_year + monthly_salary * portion_saved
+        saving = monthly_increase(saving, r, total_month_a_year, monthly_salary, portion_saved)
         if month % 6 == 0:
-            annual_salary += annual_salary * semi_annual_raise
+            # annual_salary += annual_salary * semi_annual_raise
+            annual_salary = annual_increase(annual_salary, semi_annual_raise)
             monthly_salary = annual_salary / total_month_a_year
     return saving 
 
@@ -48,9 +73,14 @@ minimum_portion = 1
 
 current_savings = calculate_salary_over_years(annual_salary_minimum, monthly_salary_minimum, minimum_portion, plan_month, r, total_month_a_year, semi_annual_raise)
 
-if current_savings < down_payment - error:
-    print("It is not possible to pay the down payment in three years.")
-    exit()
+# Method 1 (function with no argument and no return)
+# if current_savings < down_payment - error:
+#     # print("It is not possible to pay the down payment in three years.")
+#     # exit()
+#     end_session_one()
+
+# Method 2 ()
+end_session_two(current_savings, down_payment, error)
 
 step=0
 
