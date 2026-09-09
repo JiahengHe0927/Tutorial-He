@@ -120,10 +120,23 @@ a = two_times(3)
 # g(x)
 # print(x)
 
-def h(y):
-    pass
-    # x += 1 #leads to an error without line `global x` inside h
+# def h(y):
+#     pass
+#     # x += 1 #leads to an error without line `global x` inside h
     
-x = 5
-h(x)
-print(x)
+# x = 5
+# h(x)
+# print(x)
+
+def g(x):
+    def h():
+        x = 'abc'
+        print("x inside h(): is:", x)
+    x = x + 1
+    print('in g(x): x =', x)
+    h()
+    return x
+
+x = 3
+z = g(x)
+print("z is: ", z)
