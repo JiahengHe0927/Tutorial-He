@@ -6,4 +6,4 @@ for i in range(n):
         if L[j]<L[min]:
             min=j
     L[i],L[min]=L[min],L[i]
-print("L=",L)
+print(L)
