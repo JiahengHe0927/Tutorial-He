@@ -110,9 +110,14 @@
 # print(s)
 
 
-# Example 7. 
-L = ['a', 'b', 'c']
-print(''.join(L))
-print(' '.join(L))
-print('_'.join(L))
-print('123'.join(L))
+# # Example 7. 
+# L = ['a', 'b', 'c']
+# print(''.join(L))
+# print(' '.join(L))
+# print('_'.join(L))
+# print('123'.join(L))
+
+
+# # Example 8.
+# object.func1() # operate on object (so function return None)
+# object2 = func2(object)  # object will not chage, and function will return the result
