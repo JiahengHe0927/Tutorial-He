@@ -129,29 +129,35 @@
 # print(grades.values())
 
 
-# Example 6. 
-def fib_efficient(n, dict):
-    if n in dict:
-        return dict[n]
-    else:
-        ans = fib_efficient(n-1,dict) + fib_efficient(n-2, dict)
-        dict[n] = ans 
-        return ans 
+# # Example 6. 
+# def fib_efficient(n, dict):
+#     if n in dict:
+#         return dict[n]
+#     else:
+#         ans = fib_efficient(n-1,dict) + fib_efficient(n-2, dict)
+#         dict[n] = ans 
+#         return ans 
     
-Fib_num = {1:1, 2:1}
-print(fib_efficient(6, Fib_num))
+# Fib_num = {1:1, 2:1}
+# print(fib_efficient(6, Fib_num))
 
-# fib_efficient(3, dict)
-# ans = fib_efficient(2, dict) + fib_efficient(1, dict)
-#     = 1 + 1 = 2
+# # fib_efficient(3, dict)
+# # ans = fib_efficient(2, dict) + fib_efficient(1, dict)
+# #     = 1 + 1 = 2
 
-# Memorization via Dictionary
-# 
-# fib_efficieint(6, dict) => dict[6] = 8
-# ans = fib_efficient(5, dict) + fib_efficient(4, dict)
-# To calculate fib_efficient(5, dict): => dict[5] = 5
-# ans' = fib_efficient(4, dict) + fib_efficient(3, dict)
-# To calculate fib_efficient(4, dict): => dict[4] = 3
-# ans'' = fib_efficient(3, dict) + fib_efficient(2, dict)
-# To calculate fib_efficient(3, dict): => dict[3] = 2
-# ans''' = fib_efficient(2, dict) + fib_efficient(1, dict)
+# # Memorization via Dictionary
+# # 
+# # fib_efficieint(6, dict) => dict[6] = 8
+# # ans = fib_efficient(5, dict) + fib_efficient(4, dict)
+# # To calculate fib_efficient(5, dict): => dict[5] = 5
+# # ans' = fib_efficient(4, dict) + fib_efficient(3, dict)
+# # To calculate fib_efficient(4, dict): => dict[4] = 3
+# # ans'' = fib_efficient(3, dict) + fib_efficient(2, dict)
+# # To calculate fib_efficient(3, dict): => dict[3] = 2
+# # ans''' = fib_efficient(2, dict) + fib_efficient(1, dict)
+
+
+# Example 7.
+sentence = "This is a sentence"
+for word in sentence:
+    print(word)
