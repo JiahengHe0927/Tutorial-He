@@ -38,13 +38,13 @@ class Cat(Animal):
     def __str__(self):
         return "cat:"+str(self.name)+":"+str(self.age)
     
-print("\n---- cat tests ----")
+# print("\n---- cat tests ----")
 c = Cat(5)
 c.set_name("fluffy")
 print(c)
 c.speak()
 print(c.get_age())
-#a.speak() # error because there is no speak method for Animal class
+# a.speak() # error because there is no speak method for Animal class
 
     
 #################################
@@ -68,10 +68,10 @@ class Person(Animal):
     def __str__(self):
         return "person:"+str(self.name)+":"+str(self.age)
 
-print("\n---- person tests ----")
+# print("\n---- person tests ----")
 p1 = Person("jack", 30)
 p2 = Person("jill", 25)
-print(p1.get_name())
+print(p1.get_name()) 
 print(p1.get_age())
 print(p2.get_name())
 print(p2.get_age())
@@ -102,7 +102,7 @@ class Student(Person):
         else:
             print("i am watching tv")
 
-print("\n---- student tests ----")
+# print("\n---- student tests ----")
 s1 = Student('alice', 20, "CS")
 s2 = Student('beth', 18)
 print(s1)
